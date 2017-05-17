@@ -1,0 +1,110 @@
+
+.wowbfd {
+  text-align: center;
+  font-family: 'Times New Roman';
+}
+.row:not(.expanded) .row {
+  text-align: center;
+}
+.bg1 {
+  background: url(../img/fon8.jpg);
+  color: white;
+}
+.bg2 {
+  background: url(../img/fon6.jpg);
+  color: white;
+  padding: 20px;
+}
+.bg4 {
+  background-color: #4491ab;
+  color: white;
+  padding: 50px;
+}
+.alignition {
+  text-align: left;
+  padding-left: 20px;
+}
+body {
+  background: url(../img/fresh_snow.png);
+}
+.kartinkis {
+  padding: 20px;
+}
+.bg3 {
+
+  background-color: white;
+position: fixed;
+width: 100%;
+
+}
+
+.button {
+  border-radius: 5px;
+  min-width: 160px;
+  margin-top: 25px;
+  color: #4491AC;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(140,187,203,1);
+  -moz-box-shadow: 0px 0px 0px 5px rgba(140,187,203,1);
+  box-shadow: 0px 0px 0px 5px rgba(140,187,203,1);
+  font-weight: 600;
+}
+
+.button:hover {
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(140,187,203,1);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(140,187,203,1);
+  box-shadow: 0px 0px 0px 4px rgba(140,187,203,1);
+}
+
+.ti1 {
+  height: 100px;
+}
+.container {
+  padding-top: 100px;
+}
+
+p:hover, h1:hover, h2:hover, h3:hover{
+  cursor: default;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+span.phone:before{
+  content: '\2706';
+}
+
+span.address:before{
+  content: "\f041";
+}
+
+span.email:before{
+  content: "\f003";
+}
+
+span.time-work:before{
+  content: "\f017";
+}
+
+span.phone:before, span.address:before, span.email:before, span.time-work:before{
+  font-size: 2rem;
+  color: #3B40A2;
+  font-family: 'FontAwesome';
+}
+
+span.phone+p, span.address+p, span.email+p, span.time-work+p{
+  position: relative;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  margin: 0;
+}
+
+i.fa-angle-right{
+  font-size: 13rem;
+}
