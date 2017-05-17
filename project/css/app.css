@@ -2,7 +2,11 @@
 .wowbfd {
   text-align: center;
   font-family: 'Times New Roman';
+  background: url(../img/1111.jpg);
+  background-position: center;
+  color: white;
 }
+
 .row:not(.expanded) .row {
   text-align: center;
 }
@@ -38,7 +42,7 @@ width: 100%;
 
 }
 
-.button {
+.dod {
   border-radius: 5px;
   min-width: 160px;
   margin-top: 25px;
@@ -50,7 +54,7 @@ width: 100%;
   font-weight: 600;
 }
 
-.button:hover {
+.dod:hover {
   border: 1px solid #fff;
   -webkit-box-shadow: 0px 0px 0px 4px rgba(140,187,203,1);
   -moz-box-shadow: 0px 0px 0px 4px rgba(140,187,203,1);
@@ -107,4 +111,97 @@ span.phone+p, span.address+p, span.email+p, span.time-work+p{
 
 i.fa-angle-right{
   font-size: 13rem;
+}
+.bg5  {
+  padding-top: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em #8cbbcb;
+}
+.bg6 {
+  color: white;
+  font-size: 25px;
+}
+.redddd {
+  color: red;
+  text-decoration: underline;
+}
+
+.cart-block{
+  background: white;
+  height: calc( 100% - 180px );
+}
+
+.cart-block p{
+  padding: 15px;
+  margin: 0;
+}
+
+.cart-block+p{
+  padding: 15px;
+  margin: 0;
+  background: white;
+}
+
+.cart-block + p + a{
+  width: 100%;
+}
+
+.row.small-up-1.medium-up-2.large-up-3{
+  padding: 15px;
+}
+
+.row.small-up-1.medium-up-2.large-up-3 h2{
+  color: red;
+}
+
+.header-icons img{
+  height: 50px;
+}
+
+.header-icons h2{
+  color: red;
+}
+
+form#skidka input[name="name"]{
+  color: white;
+  background: url('../img/i1.png');
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: bottom;
+  background-size: 100% auto;
+  padding-left: 60px;
+  border: none;
+  box-shadow: none;
+}
+
+form#skidka input[name="phone"]{
+  color: white;
+  background: url('../img/i2.png');
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: bottom;
+  background-size: 100% auto;
+  padding-left: 60px;
+  border: none;
+  box-shadow: none;
+}
+
+form#skidka input[name="email"]{
+  color: white;
+  background: url('../img/i3.png');
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: bottom;
+  background-size: 100% auto;
+  padding-left: 60px;
+  border: none;
+  box-shadow: none;
+}
+
+form#skidka input::placeholder{
+  color: white;
+}
+
+.headicons i{
+  font-size: 45px
 }
