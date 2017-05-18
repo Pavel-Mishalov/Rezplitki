@@ -200,6 +200,10 @@ form#skidka input{
   margin: 0 auto;
 }
 
+form#skidka input[type="submit"]{
+  margin: 30px auto;
+}
+
 .row.small-up-2.medium-up-5 .columns{
   margin-top: 50px;
 }

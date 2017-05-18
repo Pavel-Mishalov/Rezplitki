@@ -16,7 +16,7 @@
   if( !empty( $_POST['email'] ) )
     $html .= '<li>Почта: ' . $_POST['email'] . '</li>';
   if( !empty( $_POST['query'] ) )
-    $html .= '<li>Почта: ' . $_POST['query'] . '</li>';
+    $html .= '<li>Комментарий: ' . $_POST['query'] . '</li>';
 
   $html .= '</ul>
       </body>
@@ -29,8 +29,8 @@
     $fp = fopen($path,"r"); 
     if (!$fp) 
     { 
-      print "Файл $path не может быть прочитан"; 
-      exit(); 
+      //print "Файл $path не может быть прочитан"; 
+      //exit(); 
     }
     $file = fread($fp, filesize($path)); 
     fclose($fp); 
@@ -51,17 +51,15 @@
     $multipart .= $message_part."--".$boundary."--\n"; 
     if(!mail($to, $thm, $multipart, $headers)) 
     { 
-      echo "К сожалению, письмо не отправлено"; 
-      exit();
+      //echo "К сожалению, письмо не отправлено"; 
+      //exit();
     }
   }else{ 
     $headers  = "MIME-Version: 1.0\n";
     $headers .= "From: <zakaz@rezplitki.ru>\r\n";
     $headers .= "Bcc: zakaz@rezplitki.ru\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\n";
-    if( mail($to, $thm, "$html, $headers") ){
-      echo 33;
-      print_r($_POST);
+    if( mail($to, $thm, $html, $headers) ){
     }
   }
 
