@@ -64,9 +64,6 @@ width: 100%;
 .ti1 {
   height: 100px;
 }
-.container {
-  padding-top: 100px;
-}
 
 p:hover, h1:hover, h2:hover, h3:hover{
   cursor: default;
@@ -198,10 +195,76 @@ form#skidka input[name="email"]{
   box-shadow: none;
 }
 
+form#skidka input{
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.row.small-up-2.medium-up-5 .columns{
+  margin-top: 50px;
+}
+
 form#skidka input::placeholder{
   color: white;
 }
 
 .headicons i{
   font-size: 45px
+}
+
+.demo-toggle-title {
+  margin-top: 0.5rem;
+}
+
+.top-bar, .top-bar ul {
+  background: white;
+}
+
+.top-bar {
+  width: 100%;
+}
+
+.menu .active {
+  font-weight: bold;
+}
+
+li a:hover{
+  color: blue;
+}
+
+.newMy{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+#formModal{
+  position: absolute;
+  border-radius: 15px;
+  top: 100px;
+  left: calc( 50% - 200px );
+  width: 400px;
+  padding: 50px;
+}
+
+@media screen and (max-width: 400px) {
+  #formModal{
+    width: 100% !important;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  li.menu-text.hide-for-medium-only.img{
+    position: relative !important;
+  }
+  li.menu-text.hide-for-medium-only.menubutton{
+    position: relative !important;
+    padding: 0 20px !important;
+  }
 }
