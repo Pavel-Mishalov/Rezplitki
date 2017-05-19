@@ -1,4 +1,5 @@
 <?php
+
   $to  = 'ekonomikal@mail.ru';//'zakaz@rezplitki.ru';
 
   $thm = 'Заказ rezplitki.ru';
@@ -10,18 +11,23 @@
       </head>
       <body>
           <p>' . $_POST['description'] . ':</p>
-          <ul>
-            <li>Имя: ' . $_POST['name'] . '</li>
-            <li>Телефон: ' . $_POST['phone'] . '</li>';
+          <ul>';
+            
+  if( !empty( $_POST['name'] ) )
+    $html .= '<li>Имя: ' . $_POST['name'] . '</li>';
+  if( !empty( $_POST['phone'] ) )
+    $html .= '<li>Телефон: ' . $_POST['phone'] . '</li>';
   if( !empty( $_POST['email'] ) )
     $html .= '<li>Почта: ' . $_POST['email'] . '</li>';
+  if( !empty( $_POST['contact'] ) )
+    $html .= '<li>Контакты: ' . $_POST['contact'] . '</li>';
   if( !empty( $_POST['query'] ) )
     $html .= '<li>Комментарий: ' . $_POST['query'] . '</li>';
 
   $html .= '</ul>
       </body>
   </html>';
-
+  
   if (!empty($_FILES['draft_plan']['tmp_name'])) 
   {  
     $path = $_FILES['draft_plan']['tmp_name'];
@@ -49,20 +55,22 @@
     $message_part .= "Content-Disposition: attachment; filename = \"".$filename."\"\n\n"; 
     $message_part .= chunk_split(base64_encode($file))."\n"; 
     $multipart .= $message_part."--".$boundary."--\n"; 
-    if(!mail($to, $thm, $multipart, $headers)) 
-    { 
+    if(mail($to, $thm, $multipart, $headers)) 
+    {
+      echo json_encode( array( 'answer' => true) );
       //echo "К сожалению, письмо не отправлено"; 
       //exit();
-    }
-  }else{ 
+    }else{
+      echo json_encode( array( 'answer' => false ) );}
+  }else{
     $headers  = "MIME-Version: 1.0\n";
     $headers .= "From: <zakaz@rezplitki.ru>\r\n";
     $headers .= "Bcc: zakaz@rezplitki.ru\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\n";
     if( mail($to, $thm, $html, $headers) ){
-    }
+      echo json_encode( array( 'answer' => true ) );
+    }else{
+      echo json_encode( array( 'answer' => false ) );}
   }
 
-//  header('Location: http://localhost');
-  //exit;
 ?>
